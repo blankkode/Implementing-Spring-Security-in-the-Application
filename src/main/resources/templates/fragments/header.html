@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Application</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a th:href="@{/logout}">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div th:insert="~{::body}"></div>
+
+</body>
+</html>
