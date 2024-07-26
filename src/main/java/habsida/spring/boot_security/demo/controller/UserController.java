@@ -3,7 +3,6 @@ package habsida.spring.boot_security.demo.controller;
 
 import habsida.spring.boot_security.demo.model.User;
 import habsida.spring.boot_security.demo.service.UserService;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,7 +18,7 @@ public class UserController {
     private final UserService userService;
     private final UserDetailsService userDetailsService;
 
-    public UserController(UserService userService, @Qualifier("userDetailsService") UserDetailsService userDetailsService) {
+    public UserController(UserService userService, UserDetailsService userDetailsService) {
         this.userService = userService;
         this.userDetailsService = userDetailsService;
     }
